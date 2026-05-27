@@ -1,6 +1,9 @@
 # Use the official Node.js 18 image as base
 FROM node:18-alpine
 
+# SOLUCIÓN TRIVY S.O: Actualiza el índice de paquetes y aplica parches de seguridad de Alpine
+RUN apk update && apk upgrade --no-cache
+
 # Set the working directory
 WORKDIR /app
 
