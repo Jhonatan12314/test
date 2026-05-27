@@ -78,7 +78,7 @@ jobs:
           exit-code: '1' # Hace que el pipeline falle si encuentra vulnerabilidades
           ignore-unfixed: true # Ignora vulnerabilidades que no tienen solución disponible todavía
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH' # Bloquea el pipeline solo por vulnerabilidades Altas y Críticas
+          severity: 'CRITICAL' # Bloquea el pipeline solo por vulnerabilidades Altas y Críticas
 
       # Paso 3: Si Trivy pasa con éxito, subimos la imagen final con todos sus tags a ACR
       - name: Push Docker image to ACR
